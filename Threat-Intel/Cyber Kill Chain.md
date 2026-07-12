@@ -6,7 +6,7 @@ status: estudo em andamento
 # Cyber Kill Chain
 
 > [!info] Sobre esta nota
-> Cyber Kill Chain e [[MITRE ATT&CK]] respondem à mesma pergunta — "em que fase do ataque estamos?" — em dois níveis de resolução diferentes. A Kill Chain é a versão em 7 fases lineares, boa para contar a história do incidente para um stakeholder não-técnico ou para estruturar uma resposta rápida. O ATT&CK é a versão granular, com centenas de técnicas mapeadas por ID. Esta nota cobre as 7 fases da Kill Chain com ações típicas de ataque e defesa em cada uma, e na seção de tópicos complementares mostra como as duas abordagens se encaixam (e onde a Kill Chain quebra).
+> Cyber Kill Chain e [MITRE ATT&CK](MITRE%20ATT%26CK.md) respondem à mesma pergunta — "em que fase do ataque estamos?" — em dois níveis de resolução diferentes. A Kill Chain é a versão em 7 fases lineares, boa para contar a história do incidente para um stakeholder não-técnico ou para estruturar uma resposta rápida. O ATT&CK é a versão granular, com centenas de técnicas mapeadas por ID. Esta nota cobre as 7 fases da Kill Chain com ações típicas de ataque e defesa em cada uma, e na seção de tópicos complementares mostra como as duas abordagens se encaixam (e onde a Kill Chain quebra).
 
 ## Sumário
 1. [O que é a Lockheed Martin](#1-o-que-é-a-lockheed-martin)
@@ -103,7 +103,7 @@ nmap -sV alvo.exemplo.com                             # versão de serviços exp
 ```
 
 > [!warning] Onde o defensor entra em jogo
-> Boa parte do reconhecimento ativo (scans de porta, requisições incomuns) **gera tráfego detectável**. É por isso que monitoramento de borda (firewall, IDS/IPS — ver [[Network Forensics]]) e alertas de scanning são o primeiro ponto de detecção possível — muito antes do ataque de fato começar.
+> Boa parte do reconhecimento ativo (scans de porta, requisições incomuns) **gera tráfego detectável**. É por isso que monitoramento de borda (firewall, IDS/IPS — ver [Network Forensics](../Rede-e-Email/Network%20Forensics.md)) e alertas de scanning são o primeiro ponto de detecção possível — muito antes do ataque de fato começar.
 
 ---
 
@@ -154,7 +154,7 @@ O atacante executa o ataque preparado nas fases anteriores — é a etapa da **p
 - Detectar anomalias e determinar a causa raiz
 
 > [!tip] Ligação com este vault
-> Todo o fluxo de análise de anexo/link malicioso já coberto em [[Email Forensics]] (seções de header, corpo e anexo) é exatamente o trabalho de investigar **esta etapa específica** da Kill Chain — é o ponto onde a maioria dos incidentes corporativos realmente começa a virar caso.
+> Todo o fluxo de análise de anexo/link malicioso já coberto em [Email Forensics](../Rede-e-Email/Email%20Forensics.md) (seções de header, corpo e anexo) é exatamente o trabalho de investigar **esta etapa específica** da Kill Chain — é o ponto onde a maioria dos incidentes corporativos realmente começa a virar caso.
 
 ---
 
@@ -179,7 +179,7 @@ O atacante garante que o conteúdo malicioso entregue na etapa anterior **seja a
 - Organizar autorizações — cada conta com o privilégio mínimo necessário
 
 > [!danger] Por que essa etapa é a mais difícil de defender
-> É a etapa com maior chance de envolver **malware ou exploit nunca visto antes** (0-day) — a defesa baseada em assinatura (Snort/Suricata, ver [[Network Forensics]]) simplesmente não tem o que comparar. É por isso que controles de **redução de superfície** (patching, privilégio mínimo, EDR comportamental) pesam mais aqui do que detecção baseada em assinatura.
+> É a etapa com maior chance de envolver **malware ou exploit nunca visto antes** (0-day) — a defesa baseada em assinatura (Snort/Suricata, ver [Network Forensics](../Rede-e-Email/Network%20Forensics.md)) simplesmente não tem o que comparar. É por isso que controles de **redução de superfície** (patching, privilégio mínimo, EDR comportamental) pesam mais aqui do que detecção baseada em assinatura.
 
 ---
 
@@ -213,7 +213,7 @@ As ações do Blue Team aqui são essencialmente as de **Threat Hunting**. Se o 
 Registry Run Key:
 HKCU\Software\Microsoft\Windows\CurrentVersion\Run\UpdaterService = "C:\Users\Public\svchost_update.exe"
 ```
-No ATT&CK, isso mapeia diretamente para **T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys)** — ver [[MITRE ATT&CK]] seção 10.4 para o mapeamento completo de um incidente.
+No ATT&CK, isso mapeia diretamente para **T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys)** — ver [MITRE ATT&CK](MITRE%20ATT%26CK.md) seção 10.4 para o mapeamento completo de um incidente.
 
 ---
 
@@ -235,7 +235,7 @@ Não há uma ação exclusiva de Blue Team só para esta etapa — o que se apli
 - Detectar tráfego de rede que possa ser comunicação C2 via Network Security Monitoring
 
 > [!tip] Ligação com este vault
-> A detecção de **beaconing** (comunicação periódica e regular com um IP externo) já coberta em [[Network Forensics]] (seção de NetFlow/anomalias de protocolo) é exatamente a técnica de detecção mais usada nesta etapa — um host "conversando" com o mesmo IP externo em intervalos regulares e previsíveis é a assinatura clássica de C2.
+> A detecção de **beaconing** (comunicação periódica e regular com um IP externo) já coberta em [Network Forensics](../Rede-e-Email/Network%20Forensics.md) (seção de NetFlow/anomalias de protocolo) é exatamente a técnica de detecção mais usada nesta etapa — um host "conversando" com o mesmo IP externo em intervalos regulares e previsíveis é a assinatura clássica de C2.
 
 ---
 
@@ -307,7 +307,7 @@ O princípio central por trás do framework: **como as 7 etapas são sequenciais
 
 ### 12.3 Cyber Kill Chain x MITRE ATT&CK — recapitulando
 
-Já coberto em detalhe em [[MITRE ATT&CK]] (seção 10.6), mas o resumo essencial: a Kill Chain é **linear e de alto nível** (boa para storytelling executivo), o ATT&CK é uma **matriz granular e não-linear** (boa para detecção técnica). Muitos times mapeiam um incidente nas duas — a Kill Chain para o resumo do relatório, o ATT&CK para o detalhamento técnico linha a linha.
+Já coberto em detalhe em [MITRE ATT&CK](MITRE%20ATT%26CK.md) (seção 10.6), mas o resumo essencial: a Kill Chain é **linear e de alto nível** (boa para storytelling executivo), o ATT&CK é uma **matriz granular e não-linear** (boa para detecção técnica). Muitos times mapeiam um incidente nas duas — a Kill Chain para o resumo do relatório, o ATT&CK para o detalhamento técnico linha a linha.
 
 ### 12.4 Unified Kill Chain — a tentativa de unir os dois modelos
 
@@ -346,7 +346,7 @@ O **Diamond Model of Intrusion Analysis** modela cada evento de intrusão como u
 - [ ] Ao investigar um incidente, identificar em qual das 7 etapas o comportamento observado se encaixa
 - [ ] Reconstruir, etapa por etapa, o que já aconteceu e o que provavelmente vem a seguir
 - [ ] Para cada etapa identificada, aplicar a matriz Detect/Deny/Disrupt/Degrade/Deceive/Contain e verificar qual ação já existia (ou faltou)
-- [ ] Complementar o mapeamento de alto nível da Kill Chain com IDs específicos do [[MITRE ATT&CK]] para o relatório técnico
+- [ ] Complementar o mapeamento de alto nível da Kill Chain com IDs específicos do [MITRE ATT&CK](MITRE%20ATT%26CK.md) para o relatório técnico
 - [ ] Se o cenário envolve insider threat, cloud ou supply chain, não forçar o encaixe na Kill Chain clássica — considerar Unified Kill Chain ou ATT&CK puro
 - [ ] Em exercícios de purple team, simular cada uma das 7 etapas isoladamente e validar se existe controle de detecção/prevenção correspondente
 - [ ] Priorizar investimento defensivo nas etapas mais cedo na cadeia (Reconnaissance/Delivery/Exploitation) — quebrar ali é mais barato que conter na etapa 7
@@ -387,9 +387,10 @@ lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
 ---
 
 ## Ver também
-- [[MITRE ATT&CK]]
-- [[Network Forensics]]
-- [[Email Forensics]]
-- [[Android Forensics]]
-- [[Windows Forensics]]
-- [[Linux Forensics]]
+- [MITRE ATT&CK](MITRE%20ATT%26CK.md)
+- [Malware](Malware.md)
+- [Network Forensics](../Rede-e-Email/Network%20Forensics.md)
+- [Email Forensics](../Rede-e-Email/Email%20Forensics.md)
+- [Android Forensics](../Mobile/Android%20Forensics.md)
+- [Forense Digital em Windows](../Windows/Forense%20Digital%20em%20Windows.md)
+- [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)

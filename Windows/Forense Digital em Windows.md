@@ -292,3 +292,5 @@ A aquisição é só o começo. Uma vez com a evidência coletada e íntegra, o 
 - [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)
 - [Arquitetura de Computadores para Forense Digital](../Fundamentos/Arquitetura%20de%20Computadores%20para%20Forense%20Digital.md)
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
+- [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)

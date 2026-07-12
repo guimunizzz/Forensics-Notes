@@ -6,7 +6,7 @@ status: estudo em andamento
 # MITRE ATT&CK
 
 > [!info] Sobre esta nota
-> O MITRE ATT&CK é a "linguagem comum" que amarra todas as outras notas deste vault — quando [[Network Forensics]] fala em mapear achados para táticas como Command and Control ou Exfiltration, ou quando [[Email Forensics]] e [[Android Forensics]] tratam de análise de malware, é o ATT&CK que dá o vocabulário padronizado para descrever *o que* o atacante fez em cada etapa. Esta nota cobre a estrutura do framework (Matrizes → Táticas → Técnicas/Sub-técnicas → Procedimentos → Mitigações → Grupos → Software) e como usá-lo na prática de um SOC.
+> O MITRE ATT&CK é a "linguagem comum" que amarra todas as outras notas deste vault — quando [Network Forensics](../Rede-e-Email/Network%20Forensics.md) fala em mapear achados para táticas como Command and Control ou Exfiltration, ou quando [Email Forensics](../Rede-e-Email/Email%20Forensics.md) e [Android Forensics](../Mobile/Android%20Forensics.md) tratam de análise de malware, é o ATT&CK que dá o vocabulário padronizado para descrever *o que* o atacante fez em cada etapa. Esta nota cobre a estrutura do framework (Matrizes → Táticas → Técnicas/Sub-técnicas → Procedimentos → Mitigações → Grupos → Software) e como usá-lo na prática de um SOC.
 
 ## Sumário
 1. [O que é o MITRE](#1-o-que-é-o-mitre)
@@ -85,7 +85,7 @@ Preparada para dispositivos móveis — segurança individual e corporativa. Con
 - iOS
 
 > [!tip] Ligação com este vault
-> A sub-matriz Android complementa diretamente a nota de [[Android Forensics]] — técnicas como instalação de app malicioso ou abuso de permissão têm IDs próprios nessa matriz, diferentes dos IDs da matriz Enterprise.
+> A sub-matriz Android complementa diretamente a nota de [Android Forensics](../Mobile/Android%20Forensics.md) — técnicas como instalação de app malicioso ou abuso de permissão têm IDs próprios nessa matriz, diferentes dos IDs da matriz Enterprise.
 
 ### 4.3 Matriz ICS
 
@@ -209,7 +209,7 @@ Link: https://attack.mitre.org/groups/ — a contagem de grupos catalogados tamb
 
 A página de cada software detalha **quais técnicas** ele implementa e **quais grupos** o utilizam — é a peça que fecha o triângulo Grupo ↔ Software ↔ Técnica.
 
-**Exemplo prático:** a página do software **"3PARA RAT"** mostra exatamente quais técnicas esse RAT (Remote Access Trojan) implementa e quais grupos APT são conhecidos por utilizá-lo — se esse RAT aparecer em uma análise de malware (ver [[Email Forensics]] seção de anexos, ou [[Android Forensics]] seção de APK malicioso), a página do ATT&CK já entrega de graça uma lista de técnicas esperadas para correlacionar com os achados.
+**Exemplo prático:** a página do software **"3PARA RAT"** mostra exatamente quais técnicas esse RAT (Remote Access Trojan) implementa e quais grupos APT são conhecidos por utilizá-lo — se esse RAT aparecer em uma análise de malware (ver [Email Forensics](../Rede-e-Email/Email%20Forensics.md) seção de anexos, ou [Android Forensics](../Mobile/Android%20Forensics.md) seção de APK malicioso), a página do ATT&CK já entrega de graça uma lista de técnicas esperadas para correlacionar com os achados.
 
 Link: https://attack.mitre.org/software/ — o catálogo já ultrapassa 700 entradas de software e continua crescendo.
 
@@ -246,7 +246,7 @@ O **ATT&CK Navigator** é uma ferramenta web que permite anotar e visualizar a m
 
 ### 10.4 Exemplo prático — mapeando um incidente completo
 
-Cenário: um usuário recebe um e-mail de phishing com anexo malicioso (ver [[Email Forensics]]), abre o documento, uma macro executa PowerShell, o atacante ganha persistência, faz dump de credenciais, se move lateralmente via RDP e exfiltra dados via HTTPS.
+Cenário: um usuário recebe um e-mail de phishing com anexo malicioso (ver [Email Forensics](../Rede-e-Email/Email%20Forensics.md)), abre o documento, uma macro executa PowerShell, o atacante ganha persistência, faz dump de credenciais, se move lateralmente via RDP e exfiltra dados via HTTPS.
 
 | Etapa observada | Tática | Técnica (exemplo de ID) |
 |---|---|---|
@@ -333,8 +333,10 @@ Changelog:    attack.mitre.org/resources/changelog.html
 ---
 
 ## Ver também
-- [[Network Forensics]]
-- [[Email Forensics]]
-- [[Android Forensics]]
-- [[Windows Forensics]]
-- [[Linux Forensics]]
+- [Cyber Kill Chain](Cyber%20Kill%20Chain.md)
+- [Malware](Malware.md)
+- [Network Forensics](../Rede-e-Email/Network%20Forensics.md)
+- [Email Forensics](../Rede-e-Email/Email%20Forensics.md)
+- [Android Forensics](../Mobile/Android%20Forensics.md)
+- [Forense Digital em Windows](../Windows/Forense%20Digital%20em%20Windows.md)
+- [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)

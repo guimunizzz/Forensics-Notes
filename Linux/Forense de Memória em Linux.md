@@ -451,3 +451,4 @@ Esse encadeamento — processo → rede → arquivos → histórico → assinatu
 - [Forense de Memória em Windows](../Windows/Forense%20de%20Memória%20em%20Windows.md)
 - [Arquitetura de Computadores para Forense Digital](../Fundamentos/Arquitetura%20de%20Computadores%20para%20Forense%20Digital.md)
 - [Ring0 — Escalonamento de Privilégio e EDR](../Anti-Forense/Ring0%20-%20Escalonamento%20de%20Privilégio%20e%20EDR.md)
+- [Malware](../Threat-Intel/Malware.md)

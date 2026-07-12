@@ -6,7 +6,7 @@ status: estudo em andamento
 # iOS Forensics
 
 > [!info] Sobre esta nota
-> Se [[Android Forensics]] gira em torno de ADB + root para chegar direto ao `/data`, iOS Forensics gira em torno de **backup** — o sandboxing e a criptografia da Apple tornam a extração direta do sistema de arquivos algo raro fora de laboratório (chip-off) ou de um jailbreak. Por isso a maior parte desta nota trata de como obter, decriptar e analisar um backup do iTunes/Finder ou do iCloud — que na prática é o caminho real de 90% das investigações em dispositivos Apple não-jailbroken.
+> Se [Android Forensics](Android%20Forensics.md) gira em torno de ADB + root para chegar direto ao `/data`, iOS Forensics gira em torno de **backup** — o sandboxing e a criptografia da Apple tornam a extração direta do sistema de arquivos algo raro fora de laboratório (chip-off) ou de um jailbreak. Por isso a maior parte desta nota trata de como obter, decriptar e analisar um backup do iTunes/Finder ou do iCloud — que na prática é o caminho real de 90% das investigações em dispositivos Apple não-jailbroken.
 
 ## Sumário
 1. [Introdução ao iOS Forensics](#1-introdução-ao-ios-forensics)
@@ -357,7 +357,7 @@ Mensagens SMS ficam em `Library/SMS/sms.db`:
 
 ### 7.3 Jailbreak e forense
 
-Um dispositivo **jailbroken** (via ferramentas como checkra1n ou unc0ver, dependendo da versão de iOS/chipset) remove as restrições de sandboxing do SO, permitindo acesso root ao sistema de arquivos completo — algo próximo do que ADB+root oferece em [[Android Forensics]].
+Um dispositivo **jailbroken** (via ferramentas como checkra1n ou unc0ver, dependendo da versão de iOS/chipset) remove as restrições de sandboxing do SO, permitindo acesso root ao sistema de arquivos completo — algo próximo do que ADB+root oferece em [Android Forensics](Android%20Forensics.md).
 
 > [!warning] Jailbreak como técnica forense é uma faca de dois gumes
 > Jailbreak em um dispositivo apreendido **modifica o sistema** — o mesmo tipo de preocupação de cadeia de custódia já discutido para root em Android. Só deve ser considerado quando backup e aquisição comercial não são suficientes, e com documentação extremamente detalhada de cada passo.
@@ -370,7 +370,7 @@ Para o investigador, isso significa: mesmo com um backup decriptado em mãos, al
 
 ### 7.5 Pegadinha de timestamp: Mac Absolute Time
 
-Diferente do Unix epoch (segundos desde 01/01/1970) usado na maioria dos bancos SQLite em [[Android Forensics]], campos como `ZDATE` em bancos do iOS (Core Data / Cocoa) usam **Mac Absolute Time**: segundos desde **01/01/2001 00:00:00 UTC**.
+Diferente do Unix epoch (segundos desde 01/01/1970) usado na maioria dos bancos SQLite em [Android Forensics](Android%20Forensics.md), campos como `ZDATE` em bancos do iOS (Core Data / Cocoa) usam **Mac Absolute Time**: segundos desde **01/01/2001 00:00:00 UTC**.
 
 **Conversão prática:**
 ```bash
@@ -447,8 +447,8 @@ date -d @$((VALOR_ZDATE + 978307200))
 ---
 
 ## Ver também
-- [[Android Forensics]]
-- [[Windows Forensics]]
-- [[Linux Forensics]]
-- [[Email Forensics]]
-- [[Network Forensics]]
+- [Android Forensics](Android%20Forensics.md)
+- [Forense Digital em Windows](../Windows/Forense%20Digital%20em%20Windows.md)
+- [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)
+- [Email Forensics](../Rede-e-Email/Email%20Forensics.md)
+- [Network Forensics](../Rede-e-Email/Network%20Forensics.md)

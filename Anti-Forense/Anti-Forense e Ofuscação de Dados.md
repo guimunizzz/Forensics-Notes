@@ -10,7 +10,7 @@ status: estudo-ativo
 > Enquanto a nota [Forense Digital em Windows — Aquisição e Duplicação](../Windows/Forense%20Digital%20em%20Windows.md) cobre o lado da **coleta de evidências**, esta nota cobre o lado oposto: as técnicas que atacantes (ou usuários mal-intencionados) usam para **dificultar, corromper ou impedir** essa coleta — e, mais importante, como detectá-las. Entender anti-forense é essencial para não confiar cegamente em uma investigação: se você não sabe o que procurar, pode achar que "não há evidência" quando na verdade ela foi escondida ou destruída.
 
 > [!info] Ver também
-> [Ring0 — Escalonamento de Privilégio e EDR](Ring0%20-%20Escalonamento%20de%20Privilégio%20e%20EDR.md) · [Arquitetura de Computadores para Forense Digital](../Fundamentos/Arquitetura%20de%20Computadores%20para%20Forense%20Digital.md) · [DFIR em Linux](../Linux/DFIR%20em%20Linux.md) · [Forense de Memória em Windows](../Windows/Forense%20de%20Memória%20em%20Windows.md)
+> [Ring0 — Escalonamento de Privilégio e EDR](Ring0%20-%20Escalonamento%20de%20Privilégio%20e%20EDR.md) · [Arquitetura de Computadores para Forense Digital](../Fundamentos/Arquitetura%20de%20Computadores%20para%20Forense%20Digital.md) · [DFIR em Linux](../Linux/DFIR%20em%20Linux.md) · [Forense de Memória em Windows](../Windows/Forense%20de%20Memória%20em%20Windows.md) · [Malware](../Threat-Intel/Malware.md)
 
 ---
 

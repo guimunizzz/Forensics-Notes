@@ -320,20 +320,20 @@ Complementa as duas fases anteriores comparando hash/padrões do anexo contra ba
 
 ## 7. Identificação e Análise de Ameaças por Email
 
-| Ameaça | Exemplo | Pontos de análise |
-|---|---|---|
-| **Phishing** | E-mail fingindo ser do banco pedindo para "atualizar" dados via link | Legitimidade do remetente, linguagem/tom, segurança do link |
-| **Spear Phishing** | Ataque personalizado usando dados já coletados sobre a vítima | Grau de personalização e uso de dados pessoais específicos |
-| **Spam** | Ofertas de produtos, promoções falsas em massa | Conteúdo não solicitado, padrões de envio em massa, horário de envio |
-| **Malware** | Anexo aparentemente relacionado ao trabalho que instala ransomware | Anexos maliciosos, macros, executáveis — análise dinâmica é essencial |
-| **BEC (Business Email Compromise)** | Instruções fraudulentas de pagamento fingindo ser do CFO | Pedidos financeiros urgentes e incomuns; comparar estilo de comunicação com e-mails anteriores legítimos |
-| **Email Spoofing** | Forjar o endereço do remetente para se passar por um executivo | Checar `From`, `Return-Path`, `Reply-To`, IP e domínio real via `Received` |
-| **Domain Impersonation** | Uso de `examp1e.com` no lugar de `example.com` | Comparação caractere a caractere da URL/domínio, consulta DNS/WHOIS |
-| **Credential Harvesting** | Formulário falso de login para roubar credenciais | Checar links/formulários e a segurança do site de destino |
-| **Whaling** | Spear phishing direcionado a executivos seniores | Conteúdo detalhado e customizado visando alto escalão |
-| **Extortion** | E-mail de extorsão ameaçando vazar dados/travar sistemas | Detectar conteúdo de ameaça e pedido de resgate sob pressão de tempo |
-| **Brand Impersonation** | E-mail imitando visualmente uma marca conhecida | Comparar logotipos/estilo com fontes oficiais da marca |
-| **Data Exfiltration** | Funcionário enviando dados confidenciais para concorrente | Checar anexos e conteúdo textual em busca de vazamento não autorizado |
+| Ameaça                              | Exemplo                                                              | Pontos de análise                                                                                        |
+| ----------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Phishing**                        | E-mail fingindo ser do banco pedindo para "atualizar" dados via link | Legitimidade do remetente, linguagem/tom, segurança do link                                              |
+| **Spear Phishing**                  | Ataque personalizado usando dados já coletados sobre a vítima        | Grau de personalização e uso de dados pessoais específicos                                               |
+| **Spam**                            | Ofertas de produtos, promoções falsas em massa                       | Conteúdo não solicitado, padrões de envio em massa, horário de envio                                     |
+| **Malware**                         | Anexo aparentemente relacionado ao trabalho que instala ransomware   | Anexos maliciosos, macros, executáveis — análise dinâmica é essencial                                    |
+| **BEC (Business Email Compromise)** | Instruções fraudulentas de pagamento fingindo ser do CFO             | Pedidos financeiros urgentes e incomuns; comparar estilo de comunicação com e-mails anteriores legítimos |
+| **Email Spoofing**                  | Forjar o endereço do remetente para se passar por um executivo       | Checar `From`, `Return-Path`, `Reply-To`, IP e domínio real via `Received`                               |
+| **Domain Impersonation**            | Uso de `examp1e.com` no lugar de `example.com`                       | Comparação caractere a caractere da URL/domínio, consulta DNS/WHOIS                                      |
+| **Credential Harvesting**           | Formulário falso de login para roubar credenciais                    | Checar links/formulários e a segurança do site de destino                                                |
+| **Whaling**                         | Spear phishing direcionado a executivos seniores                     | Conteúdo detalhado e customizado visando alto escalão                                                    |
+| **Extortion**                       | E-mail de extorsão ameaçando vazar dados/travar sistemas             | Detectar conteúdo de ameaça e pedido de resgate sob pressão de tempo                                     |
+| **Brand Impersonation**             | E-mail imitando visualmente uma marca conhecida                      | Comparar logotipos/estilo com fontes oficiais da marca                                                   |
+| **Data Exfiltration**               | Funcionário enviando dados confidenciais para concorrente            | Checar anexos e conteúdo textual em busca de vazamento não autorizado                                    |
 
 > [!info] Padrão comum
 > Praticamente todas essas ameaças deixam rastro em pelo menos duas das três camadas (header + corpo, ou corpo + anexo) — por isso a metodologia da seção 9 sempre passa pelas três, mesmo quando o indício inicial já parece claro em uma só.
@@ -464,3 +464,7 @@ strings anexo_suspeito | grep -Ei "http|cmd|powershell"
 - [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)
 - [Forense de Memória em Windows](../Windows/Forense%20de%20Memória%20em%20Windows.md)
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
+- [Malware](../Threat-Intel/Malware.md)
+- [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [Android Forensics](../Mobile/Android%20Forensics.md)

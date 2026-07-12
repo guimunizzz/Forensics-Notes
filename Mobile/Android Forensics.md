@@ -6,7 +6,7 @@ status: estudo em andamento
 # Android Forensics
 
 > [!info] Sobre esta nota
-> Android roda sobre um kernel Linux, então boa parte da intuição de [[Linux Forensics]] se transfere (EXT4, inodes, permissões Unix) — mas o modelo de sandboxing por aplicativo, a criptografia por arquivo (FBE) e a fragmentação de fabricantes/ROMs criam um universo forense próprio. Esta nota cobre do sistema de arquivos à aquisição de evidência em um dispositivo bloqueado, incluindo os artefatos (bancos SQLite, backups) onde a evidência realmente mora.
+> Android roda sobre um kernel Linux, então boa parte da intuição de [DFIR em Linux](../Linux/DFIR%20em%20Linux.md) se transfere (EXT4, inodes, permissões Unix) — mas o modelo de sandboxing por aplicativo, a criptografia por arquivo (FBE) e a fragmentação de fabricantes/ROMs criam um universo forense próprio. Esta nota cobre do sistema de arquivos à aquisição de evidência em um dispositivo bloqueado, incluindo os artefatos (bancos SQLite, backups) onde a evidência realmente mora.
 
 ## Sumário
 1. [Introdução ao Android Forensics (Mobile DFIR)](#1-introdução-ao-android-forensics-mobile-dfir)
@@ -42,7 +42,7 @@ Achados de Android Forensics ajudam a construir timeline, identificar suspeitos/
 
 ### 2.1 EXT4 e metadados
 
-Android usa **EXT4** (baseado em Linux) como formato principal de armazenamento — journaling (preserva integridade em queda de energia), alocação eficiente de blocos, e cada arquivo/diretório tem um **inode** único que rastreia permissões e acesso (mesmo conceito de [[Linux Forensics]]). Alguns dispositivos ainda suportam EXT2/EXT3/FAT32, e fabricantes específicos podem trazer JFFS2 ou YAFFS2 para partições legadas.
+Android usa **EXT4** (baseado em Linux) como formato principal de armazenamento — journaling (preserva integridade em queda de energia), alocação eficiente de blocos, e cada arquivo/diretório tem um **inode** único que rastreia permissões e acesso (mesmo conceito de [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)). Alguns dispositivos ainda suportam EXT2/EXT3/FAT32, e fabricantes específicos podem trazer JFFS2 ou YAFFS2 para partições legadas.
 
 ### 2.2 Hierarquia de partições
 
@@ -346,7 +346,7 @@ Boa parte do que está no dispositivo também está sincronizada na conta Google
 Quando a investigação envolve um app suspeito de ser malware (spyware comercial, trojan bancário):
 
 - **Análise estática**: `apktool d app.apk` desempacota o APK para inspecionar o `AndroidManifest.xml` (permissões solicitadas) e o smali; **jadx** decompila para um pseudo-código Java legível.
-- **Análise dinâmica**: **MobSF (Mobile Security Framework)** automatiza análise estática e dinâmica de APKs em um único relatório, incluindo tráfego de rede gerado pelo app — mesmo princípio de sandbox visto em [[Email Forensics]] para anexos maliciosos, aplicado a apps Android.
+- **Análise dinâmica**: **MobSF (Mobile Security Framework)** automatiza análise estática e dinâmica de APKs em um único relatório, incluindo tráfego de rede gerado pelo app — mesmo princípio de sandbox visto em [Email Forensics](../Rede-e-Email/Email%20Forensics.md) para anexos maliciosos, aplicado a apps Android.
 
 ```bash
 apktool d app_suspeito.apk -o app_decompilado
@@ -405,9 +405,12 @@ sqlite3 arquivo.db "SELECT * FROM nome_tabela LIMIT 10;"
 ---
 
 ## Ver também
-- [[Linux Forensics]]
-- [[Windows Forensics]]
-- [[Network Forensics]]
-- [[Email Forensics]]
-- [[Memory Forensics - Linux]]
-- [[Anti-Forensics]]
+- [iOS Forensics](iOS%20Forensics.md)
+- [DFIR em Linux](../Linux/DFIR%20em%20Linux.md)
+- [Forense de Memória em Linux](../Linux/Forense%20de%20Memória%20em%20Linux.md)
+- [Forense Digital em Windows](../Windows/Forense%20Digital%20em%20Windows.md)
+- [Network Forensics](../Rede-e-Email/Network%20Forensics.md)
+- [Email Forensics](../Rede-e-Email/Email%20Forensics.md)
+- [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [Malware](../Threat-Intel/Malware.md)

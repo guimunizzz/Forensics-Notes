@@ -25,6 +25,13 @@ Forense/
 ├── Linux/
 │   ├── DFIR em Linux.md
 │   └── Forense de Memória em Linux.md
+├── Mobile/
+│   ├── Android Forensics.md
+│   └── iOS Forensics.md
+├── Threat-Intel/
+│   ├── Cyber Kill Chain.md
+│   ├── MITRE ATT&CK.md
+│   └── Malware.md
 └── README.md
 ```
 
@@ -61,14 +68,29 @@ Forense/
 | [DFIR em Linux](Linux/DFIR%20em%20Linux.md) | Live response (processos, usuários, rede, histórico de shell), sistemas de arquivos (EXT2/3/4, XFS, Btrfs), imaging com `dd`/`dc3dd`, recuperação de arquivos deletados, arquivos de configuração (`/etc/passwd`, `sudoers`, `crontab`, `authorized_keys`, systemd). |
 | [Forense de Memória em Linux](Linux/Forense%20de%20Memória%20em%20Linux.md) | Captura com LiME e análise com Volatility3: geração de ISF via `dwarf2json`, pslist/psscan, sockstat, `linux.bash` (bash history residente em memória), YARA scanning — fluxo investigativo completo. |
 
+### 📱 Mobile
+| Nota | Conteúdo |
+|---|---|
+| [Android Forensics](Mobile/Android%20Forensics.md) | Sistema de arquivos (EXT4, partições, FDE x FBE), identificação de dispositivo, bypass de bloqueio (ADB, MTP, Andriller), imagem física x lógica, artefatos-chave (SMS, WhatsApp, SQLite + WAL/journal), extração via `adb backup`, anti-forense no Android, análise de APKs maliciosos. |
+| [iOS Forensics](Mobile/iOS%20Forensics.md) | Sistema de arquivos (HFS+ → APFS, App Sandbox), os três métodos de aquisição, backups criptografados do iTunes/Finder (brute force via Hashcat), dados do iCloud, estrutura do backup (Manifest.plist/Manifest.db), análise com a biblioteca Python `iOSbackup`, Keychain, timestamp em Mac Absolute Time. |
+
+### 🎯 Threat Intelligence
+| Nota | Conteúdo |
+|---|---|
+| [Cyber Kill Chain](Threat-Intel/Cyber%20Kill%20Chain.md) | As 7 etapas do modelo da Lockheed Martin (Reconnaissance → Actions on Objectives) com ações de ataque/defesa em cada uma, exemplo completo de ransomware mapeado, Course of Action Matrix, Unified Kill Chain, Diamond Model, e onde o modelo quebra (insider threat, cloud, supply chain). |
+| [MITRE ATT&CK](Threat-Intel/MITRE%20ATT%26CK.md) | Estrutura do framework (Matrizes → Táticas → Técnicas/Sub-técnicas → Procedimentos → Mitigações → Grupos → Software), ATT&CK Navigator, D3FEND, mapeamento de um incidente completo passo a passo, e a divisão da tática Defense Evasion em Stealth/Defense Impairment na v19 (abril/2026). |
+| [Malware](Threat-Intel/Malware.md) | Classificação (vírus, worm, trojan, ransomware, rootkit, RAT, fileless, wiper...), malware notável e threat actor groups (APT29, Lazarus, etc.), arquiteturas de C2 (central, P2P, randomizada), IOCs e regras YARA. |
+
 ---
 
 ## Trilha de leitura sugerida
 
 1. **Fundamentos** — entender arquitetura antes de decorar comandos
 2. **Windows ou Linux** (conforme o SO do seu foco) — aquisição/live response → memória
-3. **Rede e Email** — a evidência que trafega *entre* hosts
-4. **Anti-Forense** — como o que você aprendeu nos passos 1–3 pode ser escondido de você, e como perceber isso
+3. **Mobile** — o mesmo raciocínio de sistema de arquivos e aquisição, aplicado a dispositivos bloqueados/sandboxed
+4. **Rede e Email** — a evidência que trafega *entre* hosts
+5. **Threat Intelligence** (Kill Chain, MITRE ATT&CK, Malware) — o vocabulário e os modelos que amarram tudo o que foi encontrado nas fases 1–4 em uma narrativa de ataque
+6. **Anti-Forense** — como o que você aprendeu nos passos anteriores pode ser escondido de você, e como perceber isso
 
 Cada nota tem uma seção **Ver também** no rodapé linkando as notas relacionadas — segue o fio a partir de qualquer ponto de entrada.
 
@@ -79,11 +101,10 @@ Cada nota tem uma seção **Ver também** no rodapé linkando as notas relaciona
 Ao revisar o conteúdo, estes tópicos de DFIR ainda não têm nota dedicada no vault — candidatos naturais para expandir a trilha:
 
 - **Timeline Analysis** (log2timeline/plaso, super timelines) — hoje só é citado de passagem como "próximo passo" nas notas de aquisição Windows/Linux
-- **Análise de Malware dedicada** (estática/dinâmica, engenharia reversa básica, sandboxing) — hoje o assunto aparece espalhado em Email Forensics (anexos) e Ring0/EDR, mas sem nota própria
-- **Forense Mobile** (Android/iOS — extração lógica/física, artefatos de apps)
 - **Forense em Nuvem** (AWS/Azure/GCP — logs de auditoria, CloudTrail, forense de containers)
 - **Relatório e aspectos legais** (laudo pericial, cadeia de custódia formal em processo judicial, comunicação de achados)
 - **Registro do Windows aprofundado** (hoje coberto de forma introdutória em duas notas — poderia virar nota própria com mais chaves e cenários)
+- **Engenharia reversa de malware** (análise estática/dinâmica aprofundada, desofuscação, unpacking) — a nota [Malware](Threat-Intel/Malware.md) cobre classificação e threat intel, mas fica deliberadamente fora do escopo de reverse engineering profundo
 
 ---
 
@@ -91,5 +112,6 @@ Ao revisar o conteúdo, estes tópicos de DFIR ainda não têm nota dedicada no 
 
 - **Frontmatter YAML**: `tags`, `area`, `status` (todas atualmente `estudo-ativo`)
 - **Callouts Obsidian**: `[!info]`, `[!tip]`, `[!warning]`, `[!danger]`, `[!example]`, `[!todo]` — renderizam como blockquote simples no GitHub
+- **Links entre notas**: markdown padrão (`[Texto](caminho%20com%20espaços.md)`), não wikilinks `[[...]]` — funcionam tanto no GitHub quanto no Obsidian sem depender de resolução por nome de arquivo
 - **Checklists** ao final de cada nota — uso prático em campo/investigação real
 - **Ver também** — links cruzados entre notas relacionadas
