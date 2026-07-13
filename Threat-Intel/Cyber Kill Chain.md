@@ -387,6 +387,7 @@ lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
 ---
 
 ## Ver também
+- [DFIR com EDR](../Deteccao-e-Resposta/DFIR%20com%20EDR.md)
 - [MITRE ATT&CK](MITRE%20ATT%26CK.md)
 - [Malware](Malware.md)
 - [Network Forensics](../Rede-e-Email/Network%20Forensics.md)

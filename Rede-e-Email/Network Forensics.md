@@ -461,6 +461,7 @@ tail -f /var/log/snort/alert.fast
 - [Forense de Memória em Windows](../Windows/Forense%20de%20Memória%20em%20Windows.md)
 - [Forense de Memória em Linux](../Linux/Forense%20de%20Memória%20em%20Linux.md)
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
+- [DFIR com EDR](../Deteccao-e-Resposta/DFIR%20com%20EDR.md)
 - [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
 - [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
 - [Malware](../Threat-Intel/Malware.md)

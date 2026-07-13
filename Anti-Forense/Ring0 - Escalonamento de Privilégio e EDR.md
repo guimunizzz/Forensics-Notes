@@ -160,5 +160,6 @@ Complementando a proteção contra exploits, o Cortex XDR oferece camadas de har
 - [Arquitetura de Computadores para Forense Digital](../Fundamentos/Arquitetura%20de%20Computadores%20para%20Forense%20Digital.md)
 - [Anti-Forense e Ofuscação de Dados](Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
 - [Forense de Memória em Windows](../Windows/Forense%20de%20Memória%20em%20Windows.md)
+- [DFIR com EDR](../Deteccao-e-Resposta/DFIR%20com%20EDR.md)
 - [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
 - [Malware](../Threat-Intel/Malware.md)

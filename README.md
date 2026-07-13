@@ -19,6 +19,8 @@ Forense/
 ├── Rede-e-Email/
 │   ├── Network Forensics.md
 │   └── Email Forensics.md
+├── Deteccao-e-Resposta/
+│   └── DFIR com EDR.md
 ├── Windows/
 │   ├── Forense Digital em Windows.md
 │   └── Forense de Memória em Windows.md
@@ -56,6 +58,11 @@ Forense/
 | [Network Forensics](Rede-e-Email/Network%20Forensics.md) | Captura (Wireshark/TCPdump), análise de tráfego (malware, insider threat, exfiltração), detecção por assinatura (Snort/Suricata/Zeek), NetFlow, análise de TLS/SSL, correlação com SIEM/XDR e MITRE ATT&CK. |
 | [Email Forensics](Rede-e-Email/Email%20Forensics.md) | Protocolos (SMTP/IMAP/POP3), análise de header (Received, SPF/DKIM/DMARC), análise de corpo e anexos (estática, dinâmica/sandbox, assinatura), catálogo de ameaças (phishing, BEC, spoofing, whaling), formatos de arquivo (.eml/.msg/.pst/.mbox). |
 
+### 🛡️ Detecção e Resposta
+| Nota | Conteúdo |
+|---|---|
+| [DFIR com EDR](Deteccao-e-Resposta/DFIR%20com%20EDR.md) | EDR/EPP na prática de DFIR (detecção, coleta forense, resposta, análise contínua), configuração de detecção efetiva (Event IDs do Sysmon, regras customizadas, gestão de alertas), métodos e motores de detecção, passos de resposta a incidente, root cause analysis (subir cadeia de processo pai→filho), estudos de caso (ransomware, credential dumping, persistence), e tradução completa de cada conceito para Cortex XDR/XSIAM (BIOC/IOC/Correlation Rule, Causality Chain View, XQL de hunting). |
+
 ### 🪟 Windows
 | Nota | Conteúdo |
 |---|---|
@@ -89,8 +96,9 @@ Forense/
 2. **Windows ou Linux** (conforme o SO do seu foco) — aquisição/live response → memória
 3. **Mobile** — o mesmo raciocínio de sistema de arquivos e aquisição, aplicado a dispositivos bloqueados/sandboxed
 4. **Rede e Email** — a evidência que trafega *entre* hosts
-5. **Threat Intelligence** (Kill Chain, MITRE ATT&CK, Malware) — o vocabulário e os modelos que amarram tudo o que foi encontrado nas fases 1–4 em uma narrativa de ataque
-6. **Anti-Forense** — como o que você aprendeu nos passos anteriores pode ser escondido de você, e como perceber isso
+5. **Detecção e Resposta** (DFIR com EDR) — a ferramenta que gera a telemetria usada nas fases 2–4 em tempo real, e como agir sobre um alerta do primeiro sinal até o relatório final
+6. **Threat Intelligence** (Kill Chain, MITRE ATT&CK, Malware) — o vocabulário e os modelos que amarram tudo o que foi encontrado nas fases 1–5 em uma narrativa de ataque
+7. **Anti-Forense** — como o que você aprendeu nos passos anteriores pode ser escondido de você, e como perceber isso
 
 Cada nota tem uma seção **Ver também** no rodapé linkando as notas relacionadas — segue o fio a partir de qualquer ponto de entrada.
 
@@ -110,7 +118,7 @@ Ao revisar o conteúdo, estes tópicos de DFIR ainda não têm nota dedicada no 
 
 ## Convenções usadas nas notas
 
-- **Frontmatter YAML**: `tags`, `area`, `status` (todas atualmente `estudo-ativo`)
+- **Frontmatter YAML**: `tags`, `status` (`estudo-ativo` ou `estudo em andamento`) e, nas notas mais antigas, `area: Blue Team / DFIR`
 - **Callouts Obsidian**: `[!info]`, `[!tip]`, `[!warning]`, `[!danger]`, `[!example]`, `[!todo]` — renderizam como blockquote simples no GitHub
 - **Links entre notas**: markdown padrão (`[Texto](caminho%20com%20espaços.md)`), não wikilinks `[[...]]` — funcionam tanto no GitHub quanto no Obsidian sem depender de resolução por nome de arquivo
 - **Checklists** ao final de cada nota — uso prático em campo/investigação real
