@@ -82,11 +82,11 @@ Forense/
 | [iOS Forensics](Mobile/iOS%20Forensics.md) | Sistema de arquivos (HFS+ → APFS, App Sandbox), os três métodos de aquisição, backups criptografados do iTunes/Finder (brute force via Hashcat), dados do iCloud, estrutura do backup (Manifest.plist/Manifest.db), análise com a biblioteca Python `iOSbackup`, Keychain, timestamp em Mac Absolute Time. |
 
 ### 🎯 Threat Intelligence
-| Nota | Conteúdo |
-|---|---|
+| Nota                                                     | Conteúdo                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Cyber Kill Chain](Threat-Intel/Cyber%20Kill%20Chain.md) | As 7 etapas do modelo da Lockheed Martin (Reconnaissance → Actions on Objectives) com ações de ataque/defesa em cada uma, exemplo completo de ransomware mapeado, Course of Action Matrix, Unified Kill Chain, Diamond Model, e onde o modelo quebra (insider threat, cloud, supply chain). |
-| [MITRE ATT&CK](Threat-Intel/MITRE%20ATT%26CK.md) | Estrutura do framework (Matrizes → Táticas → Técnicas/Sub-técnicas → Procedimentos → Mitigações → Grupos → Software), ATT&CK Navigator, D3FEND, mapeamento de um incidente completo passo a passo, e a divisão da tática Defense Evasion em Stealth/Defense Impairment na v19 (abril/2026). |
-| [Malware](Threat-Intel/Malware.md) | Classificação (vírus, worm, trojan, ransomware, rootkit, RAT, fileless, wiper...), malware notável e threat actor groups (APT29, Lazarus, etc.), arquiteturas de C2 (central, P2P, randomizada), IOCs e regras YARA. |
+| [MITRE ATT&CK](Threat-Intel/MITRE%20ATT&CK.md)           | Estrutura do framework (Matrizes → Táticas → Técnicas/Sub-técnicas → Procedimentos → Mitigações → Grupos → Software), ATT&CK Navigator, D3FEND, mapeamento de um incidente completo passo a passo, e a divisão da tática Defense Evasion em Stealth/Defense Impairment na v19 (abril/2026). |
+| [Malware](Threat-Intel/Malware.md)                       | Classificação (vírus, worm, trojan, ransomware, rootkit, RAT, fileless, wiper...), malware notável e threat actor groups (APT29, Lazarus, etc.), arquiteturas de C2 (central, P2P, randomizada), IOCs e regras YARA.                                                                        |
 
 ---
 

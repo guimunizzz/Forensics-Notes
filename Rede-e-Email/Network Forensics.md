@@ -463,5 +463,5 @@ tail -f /var/log/snort/alert.fast
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
 - [DFIR com EDR](../Deteccao-e-Resposta/DFIR%20com%20EDR.md)
 - [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
-- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md)
 - [Malware](../Threat-Intel/Malware.md)

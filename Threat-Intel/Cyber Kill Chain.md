@@ -6,7 +6,7 @@ status: estudo em andamento
 # Cyber Kill Chain
 
 > [!info] Sobre esta nota
-> Cyber Kill Chain e [MITRE ATT&CK](MITRE%20ATT%26CK.md) respondem à mesma pergunta — "em que fase do ataque estamos?" — em dois níveis de resolução diferentes. A Kill Chain é a versão em 7 fases lineares, boa para contar a história do incidente para um stakeholder não-técnico ou para estruturar uma resposta rápida. O ATT&CK é a versão granular, com centenas de técnicas mapeadas por ID. Esta nota cobre as 7 fases da Kill Chain com ações típicas de ataque e defesa em cada uma, e na seção de tópicos complementares mostra como as duas abordagens se encaixam (e onde a Kill Chain quebra).
+> Cyber Kill Chain e [MITRE ATT&CK](MITRE%20ATT&CK.md) respondem à mesma pergunta — "em que fase do ataque estamos?" — em dois níveis de resolução diferentes. A Kill Chain é a versão em 7 fases lineares, boa para contar a história do incidente para um stakeholder não-técnico ou para estruturar uma resposta rápida. O ATT&CK é a versão granular, com centenas de técnicas mapeadas por ID. Esta nota cobre as 7 fases da Kill Chain com ações típicas de ataque e defesa em cada uma, e na seção de tópicos complementares mostra como as duas abordagens se encaixam (e onde a Kill Chain quebra).
 
 ## Sumário
 1. [O que é a Lockheed Martin](#1-o-que-é-a-lockheed-martin)
@@ -213,7 +213,7 @@ As ações do Blue Team aqui são essencialmente as de **Threat Hunting**. Se o 
 Registry Run Key:
 HKCU\Software\Microsoft\Windows\CurrentVersion\Run\UpdaterService = "C:\Users\Public\svchost_update.exe"
 ```
-No ATT&CK, isso mapeia diretamente para **T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys)** — ver [MITRE ATT&CK](MITRE%20ATT%26CK.md) seção 10.4 para o mapeamento completo de um incidente.
+No ATT&CK, isso mapeia diretamente para **T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys)** — ver [MITRE ATT&CK](MITRE%20ATT&CK.md) seção 10.4 para o mapeamento completo de um incidente.
 
 ---
 
@@ -307,7 +307,7 @@ O princípio central por trás do framework: **como as 7 etapas são sequenciais
 
 ### 12.3 Cyber Kill Chain x MITRE ATT&CK — recapitulando
 
-Já coberto em detalhe em [MITRE ATT&CK](MITRE%20ATT%26CK.md) (seção 10.6), mas o resumo essencial: a Kill Chain é **linear e de alto nível** (boa para storytelling executivo), o ATT&CK é uma **matriz granular e não-linear** (boa para detecção técnica). Muitos times mapeiam um incidente nas duas — a Kill Chain para o resumo do relatório, o ATT&CK para o detalhamento técnico linha a linha.
+Já coberto em detalhe em [MITRE ATT&CK](MITRE%20ATT&CK.md) (seção 10.6), mas o resumo essencial: a Kill Chain é **linear e de alto nível** (boa para storytelling executivo), o ATT&CK é uma **matriz granular e não-linear** (boa para detecção técnica). Muitos times mapeiam um incidente nas duas — a Kill Chain para o resumo do relatório, o ATT&CK para o detalhamento técnico linha a linha.
 
 ### 12.4 Unified Kill Chain — a tentativa de unir os dois modelos
 
@@ -346,7 +346,7 @@ O **Diamond Model of Intrusion Analysis** modela cada evento de intrusão como u
 - [ ] Ao investigar um incidente, identificar em qual das 7 etapas o comportamento observado se encaixa
 - [ ] Reconstruir, etapa por etapa, o que já aconteceu e o que provavelmente vem a seguir
 - [ ] Para cada etapa identificada, aplicar a matriz Detect/Deny/Disrupt/Degrade/Deceive/Contain e verificar qual ação já existia (ou faltou)
-- [ ] Complementar o mapeamento de alto nível da Kill Chain com IDs específicos do [MITRE ATT&CK](MITRE%20ATT%26CK.md) para o relatório técnico
+- [ ] Complementar o mapeamento de alto nível da Kill Chain com IDs específicos do [MITRE ATT&CK](MITRE%20ATT&CK.md) para o relatório técnico
 - [ ] Se o cenário envolve insider threat, cloud ou supply chain, não forçar o encaixe na Kill Chain clássica — considerar Unified Kill Chain ou ATT&CK puro
 - [ ] Em exercícios de purple team, simular cada uma das 7 etapas isoladamente e validar se existe controle de detecção/prevenção correspondente
 - [ ] Priorizar investimento defensivo nas etapas mais cedo na cadeia (Reconnaissance/Delivery/Exploitation) — quebrar ali é mais barato que conter na etapa 7
@@ -388,7 +388,7 @@ lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
 
 ## Ver também
 - [DFIR com EDR](../Deteccao-e-Resposta/DFIR%20com%20EDR.md)
-- [MITRE ATT&CK](MITRE%20ATT%26CK.md)
+- [MITRE ATT&CK](MITRE%20ATT&CK.md)
 - [Malware](Malware.md)
 - [Network Forensics](../Rede-e-Email/Network%20Forensics.md)
 - [Email Forensics](../Rede-e-Email/Email%20Forensics.md)

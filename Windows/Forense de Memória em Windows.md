@@ -366,4 +366,4 @@ Esse encadeamento — processo → rede → persistência (registro/serviços) �
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
 - [Arquitetura de Computadores para Forense Digital](../Fundamentos/Arquitetura%20de%20Computadores%20para%20Forense%20Digital.md)
 - [Malware](../Threat-Intel/Malware.md)
-- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md)

@@ -466,5 +466,5 @@ strings anexo_suspeito | grep -Ei "http|cmd|powershell"
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
 - [Malware](../Threat-Intel/Malware.md)
 - [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
-- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md)
 - [Android Forensics](../Mobile/Android%20Forensics.md)

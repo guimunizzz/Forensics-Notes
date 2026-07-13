@@ -412,5 +412,5 @@ sqlite3 arquivo.db "SELECT * FROM nome_tabela LIMIT 10;"
 - [Network Forensics](../Rede-e-Email/Network%20Forensics.md)
 - [Email Forensics](../Rede-e-Email/Email%20Forensics.md)
 - [Anti-Forense e Ofuscação de Dados](../Anti-Forense/Anti-Forense%20e%20Ofuscação%20de%20Dados.md)
-- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md)
 - [Malware](../Threat-Intel/Malware.md)

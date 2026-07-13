@@ -319,7 +319,7 @@ A tabela abaixo é ilustrativa — **sempre validar contra o schema real do tena
 
 ### 7.3 Exemplo de BIOC — "Log Clear" via wevtutil (mesmo caso do material)
 
-A regra customizada do SentinelOne para detectar `wevtutil.exe` limpando log de evento é, em essência, um **BIOC** — comportamento (TTP: *Indicator Removal*, T1070.001 no [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)), não um artefato estático:
+A regra customizada do SentinelOne para detectar `wevtutil.exe` limpando log de evento é, em essência, um **BIOC** — comportamento (TTP: *Indicator Removal*, T1070.001 no [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md)), não um artefato estático:
 
 ```xql
 dataset = xdr_data
@@ -370,7 +370,7 @@ Os dois exemplos da seção 5.3 (mimikatz e certutil) foram reconstruídos **man
 ## 8. Tópicos Complementares
 
 > [!info] Sobre esta seção
-> Falta amarrar EDR com o restante da hierarquia de siglas do mercado (EPP/EDR/XDR/SIEM/SOAR) e conectar os estudos de caso da seção 6 ao vocabulário do [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md) e do [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md).
+> Falta amarrar EDR com o restante da hierarquia de siglas do mercado (EPP/EDR/XDR/SIEM/SOAR) e conectar os estudos de caso da seção 6 ao vocabulário do [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md) e do [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md).
 
 ### 8.1 EPP → EDR → XDR → SIEM/SOAR/XSIAM — a evolução em uma tabela
 
@@ -408,7 +408,7 @@ Cada estudo de caso da seção 6 já chegou na etapa **Actions on Objectives** (
 - [ ] Coletar telemetria completa (logs, tráfego, memory dump se aplicável) antes de qualquer remediação
 - [ ] Rodar root cause analysis — a causa é o endpoint em si, ou um sistema upstream (ex.: aplicação web vulnerável)?
 - [ ] Verificar se o padrão observado bate com um dos estudos de caso da seção 6 (ransomware, credential dumping, persistence)
-- [ ] Mapear o comportamento para [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md) e, se aplicável, para a etapa correspondente do [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
+- [ ] Mapear o comportamento para [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md) e, se aplicável, para a etapa correspondente do [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
 - [ ] Se estiver no Cortex, verificar a Causality Chain View antes de reconstruir manualmente
 - [ ] Extrair IOCs/IoAs do incidente e considerar promovê-los a regra customizada (BIOC/IOC/Correlation Rule) para busca retrospectiva
 - [ ] Documentar cadeia de custódia da evidência coletada, preservando integridade (hash) para uso legal se necessário
@@ -452,7 +452,7 @@ Root Cause Analysis → Incident Response → System Optimization → Prevention
 ---
 
 ## Ver também
-- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT%26CK.md)
+- [MITRE ATT&CK](../Threat-Intel/MITRE%20ATT&CK.md)
 - [Cyber Kill Chain](../Threat-Intel/Cyber%20Kill%20Chain.md)
 - [Malware](../Threat-Intel/Malware.md)
 - [Network Forensics](../Rede-e-Email/Network%20Forensics.md)
